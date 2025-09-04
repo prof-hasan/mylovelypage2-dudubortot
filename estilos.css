@@ -1,0 +1,357 @@
+body {
+    background-image: url(imgs/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-attachment: fixed;
+    margin: 0;
+    display: grid;
+    grid-template: auto 1fr auto / 1fr;
+}
+
+body::selection {
+    background: rgba(93, 22, 22, 0.8);
+    color: white;
+}
+
+h1, h2 {
+    color: white;
+    font-family: 'Chinese Rocks Rg', sans-serif;
+    margin: 30px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: lighter;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-family: 'Chinese Rocks Rg', sans-serif;
+    padding: 0;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+header strong {
+    color: rgba(180, 36, 36, 1);
+}
+
+nav, nav a {
+    color: black;
+    font-size: larger;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+    background-color: rgba(214, 27, 27);
+    margin: 0;
+}
+
+nav ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a#atual {
+    text-decoration: underline;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#introducao p {
+    text-align: justify;
+    color: white;
+    font-family: 'Hapna Slab Serif W00 DemiBold', sans-serif;
+    font-size: 15px;
+    padding: 20px;
+    margin: 0 20%;
+    text-shadow: black 1px 1px 2px;
+}
+
+@media screen and (max-width: 900px) {
+    #introducao p {
+        font-size: 0.7em;
+    }
+}
+
+
+#personagens table {
+    width: 70%;
+    margin:auto;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.85);
+    overflow: hidden;
+}
+
+#personagens th, #personagens td {
+    padding: 16px 12px;
+    text-align: center;
+    font-family: 'Chinese Rocks Rg', sans-serif;
+    color: white;
+    border-bottom: 1px solid #7a2c2c;
+}
+
+#personagens th {
+    background-color: #420c0cff;
+    font-size: 1.2em;
+    letter-spacing: 2px;}
+
+#personagens tr:hover {
+    background-color: rgba(139, 25, 25, 1);
+    transition: background 1s;
+    transform: scale(1.01);
+    transition: transform 0.3s;
+}
+
+#personagens td {
+    font-size: 0.9em;
+}
+
+#personagens td img {
+    width: 60px;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 0, 0, 1);
+}
+
+#personagens td:nth-child(2) {
+    font-size: large;
+    font-weight: lighter;
+}
+
+#personagens td:nth-child(3) {
+    font-family: 'Hapna Slab Serif W00 DemiBold', sans-serif;
+}
+
+#gameplay {
+    margin: 10px auto;
+    max-width: 700px;
+    text-align: center;
+    font-family: 'Chinese Rocks Rg', sans-serif;
+    color: white;
+}
+
+#gameplay iframe {
+    margin-bottom: 20px;
+    border: 2px solid #b42424;
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}
+
+#curiosidades {
+    margin: 0px auto;
+    padding: 0 24px;
+    max-width: 1000px;
+    color: white;
+}
+
+#curiosidades h2 {
+    text-align: center;
+    font-family: 'Chinese Rocks Rg', sans-serif;
+    font-size: 32px;
+    color: gold;
+    margin: 0;
+    padding: 20px;
+}
+
+#curiosidades ol {
+    padding: 24px;
+    margin: 0;
+    columns: 2;
+    column-gap: 40px;
+    column-rule: 2px solid rgba(130, 19, 19, 0.7);
+}
+
+#curiosidades h3 {
+    color: gold;
+    font-family: 'Chinese Rocks Rg', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#curiosidades li {
+    text-align: justify;
+    font-family: 'Hapna Slab Serif W00 DemiBold', sans-serif;
+    font-size: 20px;
+    padding: 8px 12px;
+    margin-left: 24px;
+}
+
+#informacoes-do-autor {
+    color: white;
+    font-size: 0.8em;
+    padding: 20px 0 0 0;
+    margin: 0;
+}
+
+#card {
+    font-family: 'Hapna Slab Serif W00 DemiBold', sans-serif;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(121, 16, 16, 0.8);
+    margin: auto 25%;
+    padding: 20px;
+    border: maroon 2px solid;
+    border-radius: 20px;
+}
+
+#card img {
+    width: 200px;
+    height: 200px;
+    border: rgb(99, 17, 17) 3px solid;
+    margin: 10px;
+    object-fit: cover;
+}
+
+#creditos dl {
+    text-align: justify;
+    background-color: rgba(121, 16, 16, 0.8);
+    margin: auto 25%;
+    padding: 20px;
+    border: maroon 2px solid;
+    border-radius: 20px;
+}
+
+#creditos dt {
+    font-family: 'Chinese Rocks Rg', sans-serif;
+    font-size: 1.2em;
+    color: white;
+    padding: 15px;
+}
+
+#creditos a {
+    font-family: 'Hapna Slab Serif W00 DemiBold', sans-serif;
+    color: gold;
+}
+
+#creditos a:hover {
+    color: white;
+    font-size: 1.1em;
+}
+
+#mensagem {
+    color: white;
+    text-align: center;
+    font-family: 'Chinese Rocks Rg', sans-serif;
+    font-size: 1.5em;
+    margin: 10 auto;
+}
+
+#botao-secreto {
+    background: none;
+    border: none;
+    text-align: center;
+    color: white;
+    font-family: 'Chinese Rocks Rg', sans-serif;
+    font-size: 1.3em;
+    height: 50px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#botao {
+    width: 50px;
+}
+
+#botao:hover {
+    cursor: pointer;
+}
+
+#galeria {
+    background-color: rgba(121, 16, 16, 0.8);
+    border: rgba(75, 20, 20, 1) 2px solid;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Hapna Slab Serif W00 DemiBold', sans-serif;
+    font-size: 1em;
+    padding: 20px;
+    margin: 30px auto;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#itens-opcionais {
+    color: white;
+    font-family: 'Hapna Slab Serif W00 DemiBold', sans-serif;
+}
+
+#itens-opcionais img {
+    width: 70%;
+    border: rgb(99, 17, 17) 3px solid;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Chinese Rocks Rg', sans-serif;
+    font-size: 1.5em;
+    position: relative;
+    bottom: 0;
+    border-top: gray 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+#logo-rodape {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+
+}
+
+#voltar-topo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: rgb(121, 10, 10);
+    color: black;
+    font-size: 32px;
+    font-family: 'Segoe UI';
+    text-align: center;
+    border-radius: 10%;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 1;
+}
+
+#voltar-topo:hover {
+    background: #b42424;
+    transform: scale(1.4);
+    color: #ffffffff;
+}
